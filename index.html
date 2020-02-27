@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="/reset.css" />
+    <link rel="stylesheet" type="text/css" href="/index.css" />
+    <script type="text/javascript" src="/index.js"></script>
+    <title>Bootstrap Clone</title>
+  </head>
+  <body>
+    <header>
+      <div class="gray-overlay">
+        <nav>
+          <h1 class="nav-text">Start Bootstrap</h1>
+          <button class="nav-button" onclick="showHideMobileMenu()">
+            menu<img
+              rel="img"
+              src="./assets/icon.svg"
+              alt="icon"
+              class="icon"
+            />
+          </button>
+          <ul id="mobile-menu" class="mobile-menu mobile-menu-hide">
+            <li>services</li>
+            <li>portfolio</li>
+            <li>about</li>
+            <li>team</li>
+            <li>contact</li>
+          </ul>
+          <ul id="desktop-menu" class="desktop-menu">
+            <li>services</li>
+            <li>portfolio</li>
+            <li>about</li>
+            <li>team</li>
+            <li>contact</li>
+          </ul>
+        </nav>
+        <div class="header-content">
+          <h3 class="sub-content-header">Welcome To Our Studio!</h3>
+          <h1 class="content-header">it's nice to meet you</h1>
+          <button class="content-button">tell me more</button>
+        </div>
+      </div>
+    </header>
+  </body>
+  <script text="text/javascript">
+    const showHideMobileMenu = () => {
+      const dropdown = document.getElementById('mobile-menu')
+      dropdown.classList.toggle('moblie-menu-show')
+      dropdown.classList.toggle('moblie-menu-hide')
+    }
+  </script>
+</html>
