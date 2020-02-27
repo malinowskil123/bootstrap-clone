@@ -48,14 +48,6 @@ nav {
   width: 28%;
 }
 
-.header-content {
-  height: 70vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
 .mobile-menu {
   position: fixed;
   top: 9vh;
@@ -87,24 +79,36 @@ nav {
   height: 31vh;
 }
 
+.header-content {
+  height: 65vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
 .sub-content-header {
   font-size: 2rem;
   font-style: italic;
   color: #ffffff;
+  margin-bottom: 20px;
 }
 
 .content-header {
+  width: 70vw;
   color: #ffffff;
   font-size: 3rem;
   text-transform: uppercase;
-  word-wrap: normal;
+  margin-bottom: 20px;
+  font-weight: bolder;
 }
 
 .content-button {
   width: 200px;
   height: 70px;
-  border-radius: 2vw;
-  font-size: 1.2rem;
+  border-radius: 10px;
+  font-size: 20px;
   font-weight: bold;
   text-transform: uppercase;
   background-color: #fed137;
@@ -124,6 +128,10 @@ nav {
   }
   .desktop-menu {
     display: none;
+  }
+  .header-content {
+    width: 100vw;
+    height: 100vh;
   }
 }
 
@@ -160,5 +168,20 @@ nav {
 
   .desktop-menu li:hover {
     color: #fed137;
+  }
+
+  .header-content {
+    height: 100vh;
+  }
+
+  .sub-content-header {
+    font-size: 3rem;
+    margin-bottom: 50px;
+  }
+
+  .content-header {
+    width: 100vw;
+    font-size: 5rem;
+    margin-bottom: 50px;
   }
 }
