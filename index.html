@@ -5,13 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="/reset.css" />
     <link rel="stylesheet" type="text/css" href="/index.css" />
-    <script type="text/javascript" src="/index.js"></script>
     <title>Bootstrap Clone</title>
   </head>
   <body>
     <header>
       <div class="gray-overlay">
-        <nav>
+        <nav id="nav-bar" class="nav-static">
           <h1 class="nav-text">Start Bootstrap</h1>
           <button class="nav-button" onclick="showHideMobileMenu()">
             menu<img
@@ -43,6 +42,7 @@
         </div>
       </div>
     </header>
+    <section class="service-section"></section>
   </body>
   <script text="text/javascript">
     const showHideMobileMenu = () => {
@@ -50,5 +50,16 @@
       dropdown.classList.toggle('moblie-menu-show')
       dropdown.classList.toggle('moblie-menu-hide')
     }
+
+    window.addEventListener('scroll', () => {
+      const navbar = document.getElementById('nav-bar')
+      if (window.pageYOffset > 60 && window.innerWidth > 1000) {
+        navbar.classList.add('nav-scroll')
+        navbar.classList.remove('nav-static')
+      } else if (window.pageYOffset < 60 && window.innerWidth > 1000) {
+        navbar.classList.remove('nav-scroll')
+        navbar.classList.add('nav-static')
+      }
+    })
   </script>
 </html>
